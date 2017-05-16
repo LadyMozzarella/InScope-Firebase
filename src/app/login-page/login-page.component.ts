@@ -10,7 +10,7 @@ import { AuthService } from '../providers/auth.service';
 })
 export class LoginPageComponent implements OnInit {
 
-  constructor(public authService: AuthService, private router:Router) { }
+  constructor(public authService: AuthService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -18,7 +18,7 @@ export class LoginPageComponent implements OnInit {
   login() {
     this.authService.loginWithGoogle().then((data) => {
       this.router.navigate(['']);
-    })
+    });
   }
 
 }
